@@ -1,0 +1,13 @@
+<div class="col-4">
+  <div class="card" style="width:20rem;">
+    <div class="img-container">
+        <img class="card-img-top card-img" [src]="collegue.urlImg" alt="Photo de {{collegue.pseudo}}">
+    </div>
+    <div class="card-block">
+      <h4 class="card-title" align="center">{{collegue.nom}}</h4>
+      <h4 class="card-title" align="center">{{collegue.score}}</h4>
+      <button class="btn btn-success col-4 float-left" (click)="jaime()">J'aime</button>
+      <button class="btn btn-danger col-4 float-right" (click)="jeDeteste()">Je déteste</button>
+    </div>
+  </div>
+</div>
