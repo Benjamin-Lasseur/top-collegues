@@ -18,9 +18,8 @@
 
   <ngb-alert *ngIf="afficherAlert" type="success" (close)="afficherAlert=false">Ajout réussi</ngb-alert>
   <div class="row ml-4">
-    <div *ngFor="let col of collegues">
+    <div *ngFor="let col of cols">
       <app-un-collegue [collegue]="col"></app-un-collegue>
     </div>
-
   </div>
 </div>
