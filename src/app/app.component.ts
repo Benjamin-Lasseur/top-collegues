@@ -10,8 +10,8 @@ import { BrowserPlatformLocation } from '@angular/platform-browser/src/browser/l
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private collegues:Collegue[]
-  private afficherAlert:boolean
+  public collegues:Collegue[]
+  public afficherAlert:boolean
   
   ngOnInit() {
     this.afficherAlert=false
