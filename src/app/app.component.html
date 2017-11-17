@@ -17,10 +17,10 @@
 
 
   <ngb-alert *ngIf="afficherAlert" type="success" (close)="afficherAlert=false">Ajout réussi</ngb-alert>
-  <nav>
-    <button type="button" class="btn btn-light" routerLink="/classique" RouterLinkActive="btn btn-primary">Classique</button>
-    <button type="button" class="btn btn-light" routerLink="/tableau" RouterLinkActive="btn btn-primary">Tableau</button>
-    <button type="button" class="btn btn-light" routerLink="/caroussel" RouterLinkActive="btn btn-primary">Caroussel</button>
-  </nav>
+  <nav class="nav nav-pills flex-column flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link" routerLink="/classique" routerLinkActive="active">Classique</a>
+      <a class="flex-sm-fill text-sm-center nav-link" routerLink="/tableau" routerLinkActive="active">Tableau</a>
+      <a class="flex-sm-fill text-sm-center nav-link" routerLink="/caroussel" routerLinkActive="active">Carrousel</a>
+    </nav>
     <router-outlet></router-outlet>
 </div>
