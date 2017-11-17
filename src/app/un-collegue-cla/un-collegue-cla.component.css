@@ -1,0 +1,18 @@
+.card-img-top
+{
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  align-self: center;
+}
+
+.img-container{
+  height: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+.card{
+    text-align: center;
+}

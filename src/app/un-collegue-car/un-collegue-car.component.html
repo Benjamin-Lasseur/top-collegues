@@ -1,0 +1,7 @@
+<img [src]="collegue.urlImg" alt="Photo" width="100%" height="100%" (click)="changerDePage()">
+<div class="carousel-caption">
+  <h3>{{collegue.nom}}</h3>
+  <p>{{collegue.score}}</p>
+  <button class="btn btn-success col-4 float-left" (click)="jaime()">J'aime</button>
+  <button class="btn btn-danger col-4 float-right" (click)="jeDeteste()">Je déteste</button>
+</div>

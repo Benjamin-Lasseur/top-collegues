@@ -5,20 +5,48 @@ import {CollegueService} from './shared/service/collegue.service'
 import { AppComponent } from './app.component';
 import { UnCollegueComponent } from './un-collegue/un-collegue.component';
 import {HttpClientModule} from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+import { ClassiqueComponent } from './classique/classique.component';
+import { TableauComponent } from './tableau/tableau.component';
+import { CarousselComponent } from './caroussel/caroussel.component';
+import { UnCollegueTabComponent } from './un-collegue-tab/un-collegue-tab.component';
+import { UnCollegueCarComponent } from './un-collegue-car/un-collegue-car.component';
+import { UnCollegueClaComponent } from './un-collegue-cla/un-collegue-cla.component';
+import { ConteneurComponent } from './conteneur/conteneur.component';
+import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
+
+
+const appRoutes: Routes = [
+  { path: 'classique', component: ClassiqueComponent }, // /page1 affiche le composant A
+  { path: 'tableau', component: TableauComponent },
+  { path: 'caroussel', component: CarousselComponent },
+  { path: 'detail/:id', component: DetailCollegueComponent },
+  { path: '**', redirectTo: 'classique'} // redirige vers la route page1 par défaut
+  ];
 
 @NgModule({
 
   declarations: [
     AppComponent,
-    UnCollegueComponent
+    UnCollegueComponent,
+    ClassiqueComponent,
+    TableauComponent,
+    CarousselComponent,
+    UnCollegueTabComponent,
+    UnCollegueCarComponent,
+    UnCollegueClaComponent,
+    ConteneurComponent,
+    DetailCollegueComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [CollegueService],
   bootstrap: [AppComponent]
+  
 })
 
 export class AppModule { }

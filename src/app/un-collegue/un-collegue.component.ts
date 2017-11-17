@@ -1,6 +1,7 @@
 import { Component, OnInit ,Input} from '@angular/core';
 import { Collegue } from '../shared/domain/collegue';
 import { CollegueService } from '../shared/service/collegue.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ import { CollegueService } from '../shared/service/collegue.service';
 export class UnCollegueComponent implements OnInit {
 
   @Input() collegue:Collegue
-  constructor(public colServ: CollegueService) { }
+  constructor(public colServ: CollegueService, public router: Router) { }
 
   ngOnInit() {
   }
@@ -23,5 +24,9 @@ export class UnCollegueComponent implements OnInit {
   jeDeteste(){
     this.colServ.detesterUnCollegue(this.collegue).then(col =>{this.collegue=col})
   }
+
+  changerDePage() {
+    this.router.navigate([`/detail/${this.collegue.id}`])
+    }
 
 }

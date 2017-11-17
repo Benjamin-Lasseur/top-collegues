@@ -1,0 +1,15 @@
+<div class="row">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Photo</th>
+            <th scope="col">Pseudo</th>
+            <th scope="col">Score</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr app-un-collegue-tab *ngFor="let col of collegues" [collegue]="col"></tr>
+        </tbody>
+      </table>
+</div>
