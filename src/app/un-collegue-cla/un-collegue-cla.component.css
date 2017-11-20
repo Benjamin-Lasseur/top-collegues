@@ -16,3 +16,11 @@
 .card{
     text-align: center;
 }
+
+.negatif{
+  color:red;
+}
+
+.positif{
+  color:green;
+}

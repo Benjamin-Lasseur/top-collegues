@@ -14,6 +14,8 @@ import { UnCollegueCarComponent } from './un-collegue-car/un-collegue-car.compon
 import { UnCollegueClaComponent } from './un-collegue-cla/un-collegue-cla.component';
 import { ConteneurComponent } from './conteneur/conteneur.component';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
+import { ScorePipe } from './shared/pipe/score.pipe';
+import { FiltreNomPipe } from './shared/pipe/filtre-nom.pipe';
 
 
 const appRoutes: Routes = [
@@ -36,7 +38,9 @@ const appRoutes: Routes = [
     UnCollegueCarComponent,
     UnCollegueClaComponent,
     ConteneurComponent,
-    DetailCollegueComponent
+    DetailCollegueComponent,
+    ScorePipe,
+    FiltreNomPipe
   ],
   imports: [
     BrowserModule,

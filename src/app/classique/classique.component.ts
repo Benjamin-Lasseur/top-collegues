@@ -10,8 +10,23 @@ import { ConteneurComponent } from '../conteneur/conteneur.component';
 })
 export class ClassiqueComponent extends ConteneurComponent implements OnInit {
   
+  public limite:number=3
+  public commencePar:string
    constructor(colServ:CollegueService){
      super(colServ)
+   }
+
+   changeLimite($event){
+     if($event.target.value){
+      this.limite=<number>$event.target.value
+     }else{
+      this.limite=3
+     }
+     
+   }
+
+   changeFiltre($event){
+     this.commencePar=<string>$event.target.value
    }
   
 
