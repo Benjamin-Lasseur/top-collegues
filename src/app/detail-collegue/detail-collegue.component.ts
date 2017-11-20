@@ -29,5 +29,9 @@ export class DetailCollegueComponent implements OnInit {
     this.colServ.detesterUnCollegue(this.col).then(col => { this.col = col })
   }
 
+  retour(){
+    history.back()
+  }
+
 
 }
