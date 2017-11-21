@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Lien du front déployé
 
-https://dist-nfzfujmlnw.now.sh
+https://dist-dqggmozxjs.now.sh

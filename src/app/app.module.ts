@@ -16,6 +16,11 @@ import { ConteneurComponent } from './conteneur/conteneur.component';
 import { DetailCollegueComponent } from './detail-collegue/detail-collegue.component';
 import { ScorePipe } from './shared/pipe/score.pipe';
 import { FiltreNomPipe } from './shared/pipe/filtre-nom.pipe';
+import { DernierAvisComponent } from './dernier-avis/dernier-avis.component';
+import { DerniereSauvegardeComponent } from './derniere-sauvegarde/derniere-sauvegarde.component';
+import { EtatServeurComponent } from './etat-serveur/etat-serveur.component';
+import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
+import { UnHistoriqueVoteComponent } from './un-historique-vote/un-historique-vote.component';
 
 
 const appRoutes: Routes = [
@@ -40,7 +45,12 @@ const appRoutes: Routes = [
     ConteneurComponent,
     DetailCollegueComponent,
     ScorePipe,
-    FiltreNomPipe
+    FiltreNomPipe,
+    DernierAvisComponent,
+    DerniereSauvegardeComponent,
+    EtatServeurComponent,
+    HistoriqueVotesComponent,
+    UnHistoriqueVoteComponent
   ],
   imports: [
     BrowserModule,

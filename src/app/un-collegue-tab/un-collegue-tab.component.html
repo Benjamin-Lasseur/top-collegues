@@ -4,6 +4,6 @@
 <td><a routerLink="/detail/{{collegue.id}}">{{collegue.nom}}</a></td>
 <td>{{collegue.score}}</td>
 <td>
-  <button class="btn btn-success col-4 float-left" (click)="jaime()">J'aime</button>
-  <button class="btn btn-danger col-4 float-right" (click)="jeDeteste()">Je déteste</button>
+  <button class="btn btn-success col-4 float-left" (click)="jaime()" [disabled]="!activerBouton">J'aime</button>
+  <button class="btn btn-danger col-4 float-right" (click)="jeDeteste()" [disabled]="!activerBouton">Je déteste</button>
 </td>

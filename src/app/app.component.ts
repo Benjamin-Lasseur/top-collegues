@@ -12,20 +12,17 @@ import { CollegueService } from './shared/service/collegue.service';
 })
 export class AppComponent implements OnInit {
 
-  cols:Collegue[]
-  afficherAlert: boolean
+  activerBouton:boolean
 
   constructor(public colServ: CollegueService) {
-
   }
+  
   ngOnInit() {
-    this.afficherAlert = false
-    this.colServ.listerCollegues().then(data=>{this.cols = data})
+    this.colServ.obtenirEtat().subscribe(etat=>{this.activerBouton=etat})
   }
 
   add(pseudo: HTMLInputElement, url: HTMLInputElement) {
-    this.colServ.sauvegarder(new Collegue(pseudo.value, url.value, 100,0)).then(col => {this.cols.push(col)})
-    this.afficherAlert = true
+    this.colServ.sauvegarder(new Collegue(pseudo.value, url.value, 100,0))
     pseudo.value=''
     url.value=''
     return false

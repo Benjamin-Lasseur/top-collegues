@@ -11,18 +11,20 @@ import { Router } from '@angular/router';
 })
 export class UnCollegueComponent implements OnInit {
 
+  activerBouton:boolean
   @Input() collegue:Collegue
   constructor(public colServ: CollegueService, public router: Router) { }
 
   ngOnInit() {
+    this.colServ.obtenirEtat().subscribe(etat=>{this.activerBouton=etat})
   }
 
   jaime(){
-    this.colServ.aimerUnCollegue(this.collegue).then(col =>{this.collegue=col})
+    this.colServ.aimerUnCollegue(this.collegue).subscribe(col =>{this.collegue=col})
   }
 
   jeDeteste(){
-    this.colServ.detesterUnCollegue(this.collegue).then(col =>{this.collegue=col})
+    this.colServ.detesterUnCollegue(this.collegue).subscribe(col =>{this.collegue=col})
   }
 
   changerDePage() {

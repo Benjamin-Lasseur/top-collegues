@@ -13,7 +13,7 @@ export class ConteneurComponent implements OnInit{
   constructor(public colServ:CollegueService) { }
 
   ngOnInit() {
-    this.colServ.listerCollegues().then(cols=>{this.collegues=cols.sort(this.compare)})
+    this.colServ.listerCollegues().subscribe(cols=>{this.collegues=cols.sort(this.compare)})
   }
 
   compare(a, b):number {

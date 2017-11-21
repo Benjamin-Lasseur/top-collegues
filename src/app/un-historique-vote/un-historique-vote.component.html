@@ -1,0 +1,11 @@
+<div [hidden]="supprimer" class="media">
+  <div class="media-left">
+    <img [src]="historique.collegue.urlImg" class="media-object" style="width:70px; height:70px">
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{historique.collegue.nom}}</h4>
+    <p *ngIf="historique.aimer">{{historique.collegue.nom}} est aimé, il a maintenant un score de {{historique.collegue.score}} \o/</p>
+    <p *ngIf="!historique.aimer">{{historique.collegue.nom}} est détesté, il a maintenant un score de {{historique.collegue.score}} :(</p>
+  </div>
+  <button (click)="cacher()">Supprimer</button>
+</div>

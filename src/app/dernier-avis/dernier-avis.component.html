@@ -1,0 +1,13 @@
+<div *ngIf="avis!=undefined">
+  <div *ngIf="avis.aimer" class="alert alert-success" role="alert">
+    J'aime {{avis.collegue.nom}}
+  </div>
+  <div *ngIf="!avis.aimer" class="alert alert-danger" role="alert">
+    Je n'aime pas {{avis.collegue.nom}}
+  </div>
+</div>
+<div *ngIf="avis==undefined">
+  <div class="alert alert-secondary" role="alert">
+    Aucun vote
+  </div>
+</div>

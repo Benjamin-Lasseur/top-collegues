@@ -1,11 +1,12 @@
-<div class="card" style="width:20rem;">
+<div class="card">
   <div class="img-container">
     <img class="card-img-top card-img" [src]="collegue.urlImg" alt="Photo de {{collegue.nom}}" (click)="changerDePage()">
   </div>
   <div class="card-block">
     <h4 class="card-title" align="center"><a routerLink="/detail/{{collegue.id}}">{{collegue.nom |uppercase}}</a></h4>
     <h4 class="card-title" align="center"  [innerHTML]="collegue.score | score"></h4>
-    <button class="btn btn-success col-4 float-left" (click)="jaime()">J'aime</button>
-    <button class="btn btn-danger col-4 float-right" (click)="jeDeteste()">Je déteste</button>
+    <button class="btn btn-success col-5 float-left" (click)="jaime()" [disabled]="!activerBouton">J'aime</button>
+    <button class="btn btn-danger col-5 float-right" (click)="jeDeteste()" [disabled]="!activerBouton">Je déteste</button>
+
   </div>
 </div>

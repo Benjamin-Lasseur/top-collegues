@@ -17,16 +17,16 @@ export class DetailCollegueComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.colServ.trouverCollegue(params['id']).then(c => { this.col=c })
+      this.colServ.trouverCollegue(params['id']).subscribe(c => { this.col=c })
     })
   }
 
   jaime() {
-    this.colServ.aimerUnCollegue(this.col).then(col => { this.col = col })
+    this.colServ.aimerUnCollegue(this.col).subscribe(col => { this.col = col })
   }
 
   jeDeteste() {
-    this.colServ.detesterUnCollegue(this.col).then(col => { this.col = col })
+    this.colServ.detesterUnCollegue(this.col).subscribe(col => { this.col = col })
   }
 
   retour(){

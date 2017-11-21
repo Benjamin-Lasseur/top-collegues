@@ -1,6 +1,11 @@
 <div class="container">
   <h1>Top collègues</h1>
   <h5>Les meilleurs collègues du moment</h5>
+  <app-dernier-avis></app-dernier-avis>
+  <div class="row offset-11">
+    <app-etat-serveur></app-etat-serveur>
+  </div>
+
   <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Pseudo</label>
@@ -12,15 +17,23 @@
     </div>
   </form>
   <div class="row">
-    <button type="button" (click)="add(pseudo,imgUrl)" class="btn btn-primary col-12" data-dismiss="alert">Ajouter un collegue et le juger</button>
+    <button type="button" (click)="add(pseudo,imgUrl)" class="btn btn-primary col-12" data-dismiss="alert" [disabled]="!activerBouton">Ajouter un collegue et le juger</button>
+  </div>
+  <app-dernier-avis></app-dernier-avis>
+  <app-derniere-sauvegarde></app-derniere-sauvegarde>
+
+  <nav class="nav nav-pills flex-column flex-sm-row">
+    <a class="flex-sm-fill text-sm-center nav-link" routerLink="/classique" routerLinkActive="active">Classique</a>
+    <a class="flex-sm-fill text-sm-center nav-link" routerLink="/tableau" routerLinkActive="active">Tableau</a>
+    <a class="flex-sm-fill text-sm-center nav-link" routerLink="/caroussel" routerLinkActive="active">Carrousel</a>
+  </nav>
+  <div class="row">
+    <div class="col-8">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-4">
+        <app-historique-votes></app-historique-votes>
+    </div>
   </div>
 
-
-  <ngb-alert *ngIf="afficherAlert" type="success" (close)="afficherAlert=false">Ajout réussi</ngb-alert>
-  <nav class="nav nav-pills flex-column flex-sm-row">
-      <a class="flex-sm-fill text-sm-center nav-link" routerLink="/classique" routerLinkActive="active">Classique</a>
-      <a class="flex-sm-fill text-sm-center nav-link" routerLink="/tableau" routerLinkActive="active">Tableau</a>
-      <a class="flex-sm-fill text-sm-center nav-link" routerLink="/caroussel" routerLinkActive="active">Carrousel</a>
-    </nav>
-    <router-outlet></router-outlet>
 </div>
